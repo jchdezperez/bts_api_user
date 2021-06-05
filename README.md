@@ -15,7 +15,7 @@ que se van desarrollando en BTS.
 EN: API connection for the creation and tokenization of users in BrainTechSystem. This API is basic to be able to access the rest of the APIs
 that are developing in BTS. 
 
-## Para conectarte contra la API
+## Para conectarte contra la API/To connect against the API 
 
 ES: Si estás desarrollando con un framework o con código nativo, te recomiendo que uses este cliente para conectarte contra la API. No obstante, en los recursos encontrarás todas las llamadas básicas que has de realizar para poder almacenar o extraer la información necesaria.
 
