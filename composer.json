@@ -1,0 +1,16 @@
+{
+    "name": "jchdezperez/bts_api_user",
+    "description": "PHP Client Library for JCHDEZPEREZ BTS_API_USER",
+    "version": "1.0.0",
+    "authors": [
+      {
+        "name": "Juan Carlos hernández Pérez",
+        "email": "webmaster@braintechsystem.com",
+        "homepage": "https://www.braintechsystem.com/",
+        "role": "Developer to share knowledge"
+      }
+    ],
+    "license": [
+      "CREATIVE COMMONS"
+    ]
+  }
