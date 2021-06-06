@@ -1,4 +1,4 @@
-API BTS PARA CRIPTOMONEDAS/API BTS FOR CRYPTOCURRENCIES
+API BTS PARA ALTA DE USUARIOS/API BTS FOR USERS
 =======================================================
 
 [![Release](https://img.shields.io/github/v/release/jchdezperez/bts_api_user.svg)](https://github.com/jchdezperez/bts_api_user)
