@@ -29,15 +29,15 @@ EN: If you are developing with a framework or with native code, I recommend that
 
 [guzzlephp](https://docs.guzzlephp.org/en/stable/)
 
-1. Para instalar GuzzlePhp, necesitas tener instalado Composer.
-1. To install GuzzlePhp, you need to have Composer installed. 
+- Para instalar GuzzlePhp, necesitas tener instalado Composer.
+- To install GuzzlePhp, you need to have Composer installed. 
 
 ```PHP
 curl -sS https://getcomposer.org/installer | php
 ```
 
-2. Después necesitas añadir Guzzle a tus dependencias
-2. Then you need to add Guzzle to your dependencies 
+- Después necesitas añadir Guzzle a tus dependencias
+- Then you need to add Guzzle to your dependencies 
 
 ```PHP
 composer require guzzlehttp/guzzle:^7.0
