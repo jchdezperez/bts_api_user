@@ -6,7 +6,6 @@ class UserApiCall {
 
     private $baseUrl = 'https://www.braintechsystem.com/api/bts';
 
-
     public function __construct($bearerToken)
     {
         $this->bearerToken = $bearerToken;
@@ -21,48 +20,20 @@ class UserApiCall {
      * @param String $userPassword
      * @return Object
      */
-    public function createUser($userName, $userNick, $userEmail, $userPassword) {
+    public function createUser($userName, $userNick, $userEmail, $userPhone, $userPassword) {
         $params = [
             "userName"         => (string) $userName,
             "userNick"         => (string) $userNick,
             "userEmail"        => (string) $userEmail,
+            "userPhone"        => (string) $userPhone,
             "userPassword"     => (string) $userPassword,
         ];
 
-        return $this->executeRequestForCreateUser('/user/register', $params);
+        return $this->executeRequest('/user/register', $params);
     }
 
     /**
-     * Call to API for create new user
-     *
-     * @param String $endpoint
-     * @param Array $params
-     * @return void
-     */
-    private function executeRequestForCreateUser($endpoint, $params) 
-    {
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-        CURLOPT_URL => $this->baseUrl.$endpoint.http_build_query($params),
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => '',
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => 'POST'
-        ));
-
-        $response = curl_exec($curl);
-
-        curl_close($curl);
-        echo $response;
-    }
-
-
-    /**
-     * Method returned by the bearerToken to be able to make the rest of the calls 
+     * Method returned by the "bearerToken" to be able to make the rest of the calls 
      *
      * @param String $userCode
      * @param String $userEmail
@@ -76,45 +47,8 @@ class UserApiCall {
             "userPassword"     => (string) $userPassword,
         ];
 
-        return $this->executeRequestForGetUserToken('/user/token', $params);
+        return $this->executeRequest('/user/token', $params);
     }
-
-    /**
-     * Method with which the bearerToken is obtained 
-     *
-     * @param String $endpoint
-     * @param Array $params
-     * @return void
-     */
-    private function executeRequestForGetUserToken($endpoint, $params)
-    {
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-        CURLOPT_URL => $this->baseUrl.$endpoint.http_build_query($params),
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => '',
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => 'GET',
-        ));
-
-        $response = curl_exec($curl);
-
-        curl_close($curl);
-        echo $response;
-    }
-
-
-
-
-
-
-    /**************************************************/
-    /************ METHOD WITH BEARER TOKEN ************/
-
 
     /**
      * Method to returned user information by userCode
@@ -129,8 +63,6 @@ class UserApiCall {
 
         return $this->executeRequest('/user/information', $params);
     }
-
-
     
     /**
      * Method to update user information
@@ -159,8 +91,6 @@ class UserApiCall {
 
         return $this->executeRequest('/user/update', $params);
     }
-
-
 
     /**
      * Basic to API CRYPTO call
