@@ -14,4 +14,8 @@
         "role": "Developer to share knowledge"
       }
     ],
+    "require": {
+        "php": ">=7.4",
+        "another-vendor/package": "1.*"
+    }
   }
