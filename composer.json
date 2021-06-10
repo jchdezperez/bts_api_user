@@ -2,7 +2,7 @@
     "name": "jchdezperez/bts_api_user",
     "type": "library",
     "description": "PHP Client Library for JCHDEZPEREZ BTS_API_USER",
-    "keywords": ["braintechsyste,","bts","customer","users", "cryptocurrency", "cryptocurrencies"],
+    "keywords": ["braintechsystem","bts","customer","users", "cryptocurrency", "cryptocurrencies"],
     "version": "1.0.1",
     "license": "MIT",
     "homepage": "https://braintechsystem.com",
