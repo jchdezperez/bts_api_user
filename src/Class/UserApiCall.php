@@ -1,15 +1,12 @@
 <?php
 
+namespace Src\Class;
+
+use Src\Helpers\ApiCalls;
+
 class UserApiCall {
 
-    private $bearerToken;
-
-    private $baseUrl = 'https://www.braintechsystem.com/api/bts';
-
-    public function __construct($bearerToken)
-    {
-        $this->bearerToken = $bearerToken;
-    }
+    
 
     /**
      * Method used to create a new user 
@@ -29,7 +26,7 @@ class UserApiCall {
             "userPassword"     => (string) $userPassword,
         ];
 
-        return $this->executeRequest('/user/register', $params);
+        return ApiCalls::executeRequestWithoutBearerToken('/user/register', $params);
     }
 
     /**
@@ -47,7 +44,7 @@ class UserApiCall {
             "userPassword"     => (string) $userPassword,
         ];
 
-        return $this->executeRequest('/user/token', $params);
+        return ApiCalls::executeRequestWithoutBearerToken('/user/token', $params);
     }
 
     /**
@@ -61,7 +58,7 @@ class UserApiCall {
             "userCode"  => (int) $userCode,
         ];
 
-        return $this->executeRequest('/user/information', $params);
+        return ApiCalls::executeRequest('/user/information', $params);
     }
     
     /**
@@ -89,41 +86,7 @@ class UserApiCall {
             'userPassword'      => (string) $userPassword,
         ];
 
-        return $this->executeRequest('/user/update', $params);
-    }
-
-    /**
-     * Basic to API CRYPTO call
-     *
-     * @param String $endpoint
-     * @param Array $params
-     * @return void
-     */
-    private function executeRequest($endpoint, $params)
-    {
-        $curl = curl_init();
-        $jsonParams = json_encode($params);
-
-        curl_setopt_array($curl, array(
-                CURLOPT_URL                 => $this->baseUrl.$endpoint,
-                CURLOPT_RETURNTRANSFER      => true,
-                CURLOPT_MAXREDIRS           => 3,
-                CURLOPT_TIMEOUT             => 120,
-                CURLOPT_FOLLOWLOCATION      => true,
-                CURLOPT_HTTP_VERSION        => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST       => "POST",
-                CURLOPT_POSTFIELDS          => $jsonParams,
-                CURLOPT_HTTPHEADER          => array(
-                    "Content-Type: application/json",
-                    'Authorization: Bearer '.$this->bearerToken
-                ),
-        ));
-
-        $response = curl_exec($curl);
-
-        curl_close($curl);
-
-        return json_decode($response);
+        return ApiCalls::executeRequest('/user/update', $params);
     }
 
 }

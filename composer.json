@@ -7,14 +7,19 @@
     "license": "MIT",
     "homepage": "https://braintechsystem.com",
     "authors": [
-      {
-        "name": "Juan Carlos hernández Pérez",
-        "email": "webmaster@braintechsystem.com",
-        "homepage": "https://www.braintechsystem.com/",
-        "role": "Developer to share knowledge"
-      }
+        {
+            "name": "Juan Carlos hernández Pérez",
+            "email": "webmaster@braintechsystem.com",
+            "homepage": "https://www.braintechsystem.com/",
+            "role": "Developer to share knowledge"
+        }
     ],
     "require": {
         "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
     }
-  }
+}
