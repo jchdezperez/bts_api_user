@@ -2,6 +2,7 @@ API BTS PARA ALTA DE USUARIOS/API BTS FOR USERS
 =======================================================
 
 [![Release](https://img.shields.io/github/v/release/jchdezperez/bts_api_user.svg)](https://github.com/jchdezperez/bts_api_user)
+[![Downloads](http://img.shields.io/packagist/dm/jchdezperez/bts_api_user.svg)](https://packagist.org/packages/jchdezperez/bts_api_user)
 [![Issues](https://img.shields.io/github/issues/jchdezperez/bts_api_user)](https://github.com/jchdezperez/bts_api_user)
 [![Forks](https://img.shields.io/github/forks/jchdezperez/bts_api_user)](https://github.com/jchdezperez/bts_api_user)
 [![Stars](https://img.shields.io/github/stars/jchdezperez/bts_api_user)](https://github.com/jchdezperez/bts_api_user)
