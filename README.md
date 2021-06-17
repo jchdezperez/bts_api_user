@@ -7,7 +7,7 @@ API BTS FOR USERS
 [![Stars](https://img.shields.io/github/stars/jchdezperez/bts_api_user)](https://github.com/jchdezperez/bts_api_user)
 
 
-# Documentation
+# Official documentation
 
 In this link you can read the documentation about this API: [Documentation](https://docs.braintechsystem.com/api/user/)
 
