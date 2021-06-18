@@ -6,13 +6,13 @@ class ApiCalls {
 
 
     /**
-     * Basic to API CRYPTO call without bearer token
-     *
+     * Basic to API CRYPTO call without bearer token.
+     * 
      * @param String $endpoint
-     * @param Array $params
-     * @return void
+     * @param array $params
+     * @return JSON
      */
-    public static function executeRequestWithoutBearerToken($endpoint, $params)
+    public static function executeRequestWithoutBearerToken(String $endpoint, Array $params)
     {
         $baseUrl = 'https://www.braintechsystem.com/api/bts';
 
@@ -41,15 +41,14 @@ class ApiCalls {
     }
 
 
-
     /**
-     * Basic to API CRYPTO call
-     *
+     * Basic to API CRYPTO call.
+     * 
      * @param String $endpoint
-     * @param Array $params
-     * @return void
+     * @param array $params
+     * @return JSON
      */
-    public static function executeRequest($endpoint, $params)
+    public static function executeRequest(String $endpoint, Array $params)
     {
         $baseUrl = 'https://www.braintechsystem.com/api/bts';
         $bearerToken = '';
