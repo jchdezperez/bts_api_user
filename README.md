@@ -39,3 +39,11 @@ curl -sS https://getcomposer.org/installer | php
 ```PHP
 composer require guzzlehttp/guzzle:^7.0
 ```
+
+- For run docker in your engine, launch the next command
+
+```PHP
+docker-compose up -d
+```
+
+This will raise a docker with nginx and php
