@@ -28,22 +28,20 @@ If you are developing with a framework or with native code, I recommend that you
 
 [guzzlephp](https://docs.guzzlephp.org/en/stable/)
 
-- To install GuzzlePhp, you need to have Composer installed. 
+- To install GuzzlePhp, you need to have Composer installed.
 
 ```PHP
 curl -sS https://getcomposer.org/installer | php
 ```
 
-- Then you need to add Guzzle to your dependencies 
+- Then you need to add Guzzle to your dependencies.
 
 ```PHP
 composer require guzzlehttp/guzzle:^7.0
 ```
 
-- For run docker in your engine, launch the next command
+- For run docker in your engine, launch the next command. This will raise a docker with nginx and php.
 
 ```PHP
 docker-compose up -d
 ```
-
-This will raise a docker with nginx and php
