@@ -1,7 +1,5 @@
 FROM php:7.3-fpm
 
-ENV ACCEPT_EULA=Y
-
 RUN apt-get update && apt-get install -y git zip
 RUN docker-php-ext-install sockets pdo_mysql
 
